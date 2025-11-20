@@ -1,0 +1,91 @@
+wandb: Using wandb-core as the SDK backend. Please refer to https://wandb.me/wandb-core for more information.
+wandb: Tracking run with wandb version 0.18.3
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+`torch_dtype` is deprecated! Use `dtype` instead!
+⚙️  Running in WANDB offline mode
+---------------------------- from_pretrained ----------------------------
+---------------------------- __init__ ----------------------------
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 52.18it/s]
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+The new lm_head weights will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+trainable: 0 / 7,241,732,096 (0.00%)
+Base decoder nb parameters 7241732096
+=============================================================
+COCOMConfig {
+  "_attn_implementation_autoset": true,
+  "ae_mode": "token",
+  "attn_implementation": null,
+  "auto_map": {
+    "AutoConfig": "modelling_pisco.COCOMConfig",
+    "AutoModel": "modelling_pisco.COCOM"
+  },
+  "compr_base_model_name": "/root/autodl-tmp/model/Mistral-7B",
+  "compr_every_n_layer": null,
+  "compr_linear_type": "concat",
+  "compr_mlp_hidden_dim": 8096,
+  "compr_model_name": null,
+  "compr_n_layers": null,
+  "compr_rate": 16,
+  "compr_rms_norm": false,
+  "compr_use_mlp": true,
+  "decoder_model_name": "/root/autodl-tmp/model/Mistral-7B",
+  "device_map": null,
+  "different_mem_tokens": true,
+  "doc_max_length": 128,
+  "generation_top_k": 1,
+  "kbtc_training": false,
+  "load_adapters": false,
+  "lora": true,
+  "lora_compressor": false,
+  "lora_r": 16,
+  "lora_r_compressor": 16,
+  "max_new_tokens": 128,
+  "model_type": "COCOM",
+  "optimize_mem_tokens": true,
+  "quantization": "no",
+  "sep": true,
+  "training_form": "both_separately",
+  "transformers_version": "4.56.1"
+}
+
+=============================================================
+cfg.compr_model_name None
+cfg.lora True
+cfg.load_adapters False
+self.training_form both_separately
+1
+2
+Base decoder nb parameters 7241732096
+-=-===-=-=--=-=-=---=-=--=-=--=-=-==--=-=-=-=-=-=
+tensor([  733, 28748, 16289, 28793], device='cuda:0') tensor([2], device='cuda:0')
+trainable: 0 / 7,241,822,208 (0.00%)
+Base decoder nb parameters 7241822208
+self.lora: True
+self.adapter_keys: []
+Base decoder nb parameters 7241822208
+-=-=-==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-==-=-=-=-=-=-=-=-=-=-=-
+================== 优化嵌入层 ===================
+model nb parameters 7241822208
+替换首尾层模型
+1. model nb parameters: 7241822208
+加载适应模型
+loading adapter decoder_adapter
+loading adapter encoder_adapter
+load adapter
+trainable: 41,943,040 / 7,325,708,288 (0.57%)
+2. model nb parameters 7325708288
+3. model nb parameters 7325708288
+model nb parameters 7325708288
+trainable: 83,886,080 / 7,325,708,288 (1.15%)
+2. model nb parameters 7325708288
+LLM可训练总参数量：83.886 百万
+adamw:LLM可训练总参数量：83.886 百万
+Training:   0%|          | 0/29 [00:00<?, ?it/s]Training:   3%|▎         | 1/29 [00:02<01:12,  2.61s/it]Training:   7%|▋         | 2/29 [00:03<00:47,  1.74s/it]Training:  10%|█         | 3/29 [00:04<00:37,  1.46s/it]Training:  14%|█▍        | 4/29 [00:06<00:35,  1.43s/it]Training:  17%|█▋        | 5/29 [00:07<00:31,  1.33s/it]Training:  21%|██        | 6/29 [00:08<00:29,  1.28s/it]Training:  24%|██▍       | 7/29 [00:09<00:27,  1.25s/it]Training:  28%|██▊       | 8/29 [00:11<00:26,  1.24s/it]Training:  31%|███       | 9/29 [00:12<00:27,  1.38s/it]Training:  34%|███▍      | 10/29 [00:13<00:25,  1.36s/it]Training:  38%|███▊      | 11/29 [00:15<00:24,  1.36s/it]Training:  41%|████▏     | 12/29 [00:16<00:23,  1.40s/it]Training:  45%|████▍     | 13/29 [00:18<00:22,  1.42s/it]Training:  48%|████▊     | 14/29 [00:19<00:22,  1.47s/it]Training:  52%|█████▏    | 15/29 [00:21<00:19,  1.36s/it]Training:  55%|█████▌    | 16/29 [00:22<00:16,  1.29s/it]Training:  59%|█████▊    | 17/29 [00:23<00:14,  1.22s/it]Training:  62%|██████▏   | 18/29 [00:24<00:13,  1.19s/it]Training:  66%|██████▌   | 19/29 [00:25<00:11,  1.16s/it]Training:  69%|██████▉   | 20/29 [00:26<00:10,  1.16s/it]Training:  72%|███████▏  | 21/29 [00:27<00:09,  1.15s/it]Training:  76%|███████▌  | 22/29 [00:28<00:08,  1.16s/it]Training:  79%|███████▉  | 23/29 [00:30<00:07,  1.20s/it]Training:  83%|████████▎ | 24/29 [00:31<00:06,  1.24s/it]Training:  86%|████████▌ | 25/29 [00:32<00:05,  1.27s/it]Training:  90%|████████▉ | 26/29 [00:34<00:04,  1.34s/it]Training:  93%|█████████▎| 27/29 [00:35<00:02,  1.39s/it]Training:  97%|█████████▋| 28/29 [00:37<00:01,  1.45s/it]Training: 100%|██████████| 29/29 [00:39<00:00,  1.50s/it]Training: 100%|██████████| 29/29 [00:39<00:00,  1.35s/it]
+Epoch:[1/2](0/29) loss:3.554 lr:0.000000550000 epoch_Time:1.0min:
+Training:   0%|          | 0/29 [00:00<?, ?it/s]Training:   3%|▎         | 1/29 [00:01<00:33,  1.20s/it]Training:   7%|▋         | 2/29 [00:02<00:30,  1.13s/it]Training:  10%|█         | 3/29 [00:03<00:28,  1.11s/it]Training:  14%|█▍        | 4/29 [00:04<00:27,  1.11s/it]Training:  17%|█▋        | 5/29 [00:05<00:26,  1.10s/it]Training:  21%|██        | 6/29 [00:06<00:25,  1.11s/it]Training:  24%|██▍       | 7/29 [00:07<00:25,  1.16s/it]Training:  28%|██▊       | 8/29 [00:09<00:24,  1.17s/it]Training:  31%|███       | 9/29 [00:10<00:23,  1.18s/it]Training:  34%|███▍      | 10/29 [00:11<00:23,  1.22s/it]Training:  38%|███▊      | 11/29 [00:13<00:22,  1.27s/it]Training:  41%|████▏     | 12/29 [00:14<00:22,  1.34s/it]Training:  45%|████▍     | 13/29 [00:16<00:22,  1.39s/it]Training:  48%|████▊     | 14/29 [00:17<00:21,  1.45s/it]Training:  52%|█████▏    | 15/29 [00:18<00:19,  1.37s/it]Training:  55%|█████▌    | 16/29 [00:19<00:16,  1.30s/it]Training:  59%|█████▊    | 17/29 [00:21<00:14,  1.24s/it]Training:  62%|██████▏   | 18/29 [00:22<00:13,  1.20s/it]Training:  66%|██████▌   | 19/29 [00:23<00:11,  1.19s/it]Training:  69%|██████▉   | 20/29 [00:24<00:10,  1.18s/it]Training:  72%|███████▏  | 21/29 [00:25<00:09,  1.17s/it]Training:  76%|███████▌  | 22/29 [00:26<00:08,  1.18s/it]Training:  79%|███████▉  | 23/29 [00:28<00:07,  1.20s/it]Training:  83%|████████▎ | 24/29 [00:29<00:06,  1.25s/it]Training:  86%|████████▌ | 25/29 [00:30<00:05,  1.28s/it]Training:  90%|████████▉ | 26/29 [00:32<00:04,  1.35s/it]Training:  93%|█████████▎| 27/29 [00:33<00:02,  1.41s/it]Training:  97%|█████████▋| 28/29 [00:35<00:01,  1.47s/it]Training: 100%|██████████| 29/29 [00:37<00:00,  1.51s/it]Training: 100%|██████████| 29/29 [00:37<00:00,  1.28s/it]
+Epoch:[2/2](0/29) loss:3.172 lr:0.000000300000 epoch_Time:0.0min:
+[1;34mwandb[0m:
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /root/autodl-tmp/minimind/wandb/offline-run-20250922_003310-i6n2zln3[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250922_003310-i6n2zln3/logs[0m
